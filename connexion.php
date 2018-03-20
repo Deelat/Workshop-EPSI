@@ -22,12 +22,7 @@ if (isset($_SESSION["account"])) {
     <title>Workshop - Connexion</title>
 </head>
 <body>
-<div id="wrap">
-
-    <?php
-    $index = 3;
-    include('../includes/navigation.php');
-    ?>
+<div id="wrap"
     <div id="content">
         <section>
             <div>
