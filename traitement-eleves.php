@@ -8,7 +8,7 @@ $dob = $_POST['dob'];
 $school = $_POST['school'];
 $year= $_POST['year'];
 $email = $_POST['mail'];
-$password = md5($_POST['password']);
+$password = sha1($_POST['password']);
 
 $req = 'INSERT INTO eleves (nom, prenom, ddn, ecole, annee, mail, mdp) VALUES ("'.$firstname.'", "'.$lastname.'", "'.$dob.'", "'.$school.'", "'.$year.'", "'.$email.'", "'.$password.'")';
 
