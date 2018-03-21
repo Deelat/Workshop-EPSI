@@ -102,3 +102,7 @@
   -moz-transition: all 0.4s;
   transition: all 0.4s;
 }
+.body {
+  position: relative;
+  background-color: whitesmoke
+}
