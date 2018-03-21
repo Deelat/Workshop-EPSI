@@ -1,0 +1,104 @@
+.login100-form-btn {
+  font-family: Poppins-Medium;
+  font-size: 16px;
+  color: #fff;
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  width: 50%;
+  height: 40px;
+  background-color: #0066ff;
+  border-radius: 25px;
+
+  box-shadow: 0 10px 30px 0px rgba(87, 184, 70, 0.5);
+  -moz-box-shadow: 0 10px 30px 0px rgba(87, 184, 70, 0.5);
+  -webkit-box-shadow: 0 10px 30px 0px rgba(87, 184, 70, 0.5);
+  -o-box-shadow: 0 10px 30px 0px rgba(87, 184, 70, 0.5);
+  -ms-box-shadow: 0 10px 30px 0px rgba(87, 184, 70, 0.5);
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.limiter {
+  width: 100%;
+  margin: 0 auto;
+}
+.container-login100 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+}
+.checkbox {
+    justify-content: center;
+    align-items: center
+}
+.body {
+    background-color: #ffff80
+}
+.recherche_p {
+    background-color: #eeeeee;
+    border-style: solid;   /* Style de la bordure  */
+    border-width: 1px;   /* Epaisseur de la bordure  */
+    border-color: #dddddd;   /* Couleur de la bordure  */
+    padding: 10px 10px 10px 10px;   /* Espace entre les bords et le contenu : haut droite bas gauche  */
+}
+#searchthis #search {
+    background-color: #ffffff;   /* Couleur de fond */
+    border-style: solid;   /* Style de la bordure  */
+    border-width: 1px;   /* Epaisseur de la bordure  */
+    border-color: #dddddd;   /* Couleur de la bordure  */
+    padding: 5px 10px 5px 10px;   /* Espace entre les bords et le contenu : haut droite bas gauche  */
+    font-family: Lato;   /* Police du texte */
+    font-size: 12px;   /* Taille de la police du texte */
+    font-weight: normal;   /* Graisse du texte : normal = normal ; bold = gras */
+    letter-spacing: 1px;   /* Espacement des caractères */
+    width: 98.5%;   /* Permet d'ajuster la largeur du champ de saisie à 100% */
+    box-sizing: border-box;   /* Important */
+}
+#search-btn {
+    font-family: Poppins-Medium;
+  font-size: 16px;
+  color: #fff;
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  width: 10%;
+  height: 40px;
+  background-color: #0066ff;
+  border-radius: 25px;
+
+  box-shadow: 0 10px 30px 0px rgba(87, 184, 70, 0.5);
+  -moz-box-shadow: 0 10px 30px 0px rgba(87, 184, 70, 0.5);
+  -webkit-box-shadow: 0 10px 30px 0px rgba(87, 184, 70, 0.5);
+  -o-box-shadow: 0 10px 30px 0px rgba(87, 184, 70, 0.5);
+  -ms-box-shadow: 0 10px 30px 0px rgba(87, 184, 70, 0.5);
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
