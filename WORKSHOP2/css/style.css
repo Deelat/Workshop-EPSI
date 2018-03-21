@@ -99,6 +99,9 @@ hr {
 #menu.navbar-default .navbar-nav > li > a:hover {
 	color: #71bd46;
 }
+
+#Seconnecter > li > a { color: yellow }
+
 .on {
 	background-color: #222222 !important;
 	padding: 0 !important;
@@ -225,7 +228,7 @@ img.team-img {
 	padding-bottom: 10px;
 	display: block;
 }
-/* Gallery Section
+/* Gallery Section 
 ==============================*/
 #works-section {
 	padding: 100px 0;
@@ -454,3 +457,4 @@ label {
 	padding: 15% 10%;
 }
 }
+
