@@ -11,7 +11,7 @@
 	        die('Erreur : '.$e->getMessage());
 	}
 
-	$req = $bdd->prepare('SELECT id_categorie FROM categorie_topic WHERE nom = :categorie');
+	$req = $bdd->prepare('SELECT id_categorie FROM categorie_topic WHERE categorie_nom = :categorie');
 	$req->execute(array(
 		'categorie' => $_POST['categorie']
 	));
