@@ -11,10 +11,11 @@
 	        die('Erreur : '.$e->getMessage());
 	}
 	?>
+
+<div class="jumbotron">
 <main role="main" class="container">
 
     
-    <div class="jumbotron">
     	<br>
 
       <div class="container">
@@ -51,10 +52,9 @@
 			</div>
           <button type="submit" class="btn btn-primary">Ajouter</button>
         </form>
+        <br><br>
       </div>
-    </div>
 
-    <div class="jumbotron">
       <div class="container">
 
 		<?php 

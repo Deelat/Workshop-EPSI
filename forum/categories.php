@@ -43,11 +43,10 @@
                                 
                             ?>
                                 <!-- <div class="jumbotron" style="background-color:#ffffcc;"> -->
-
-                                    <button href="#" type="button" class="btn btn-default btn-block text-left" style="text-align:left; padding-left:6px">
+                                    <a href="<?php echo "topic.php?article=".$topic['id_topic']."&color=".$panel[$i]."&name=".$donnees['categorie_nom']."" ?>" class="btn btn-default btn-block text-left" style="text-align:left; padding-left:6px">
                                         <p class="text-primary"><?php echo $topic['nom']; ?></p>
                                         <p class="font-italic" ><small>Un sujet de: <?php echo $topic['auteur']; ?> publié le <?php echo $topic['date_creation']; ?></small></p>
-                                    </button>
+                                    </a>
                                 <!-- </div> -->
                             <?php
                                 }

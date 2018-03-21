@@ -9,8 +9,9 @@
   
 
 
-    <!-- Custom styles for this template -->
+    <!--Custom style-->
     <link href="offcanvas.css" rel="stylesheet">
+
 <?php  
 	include $_SERVER['DOCUMENT_ROOT']."/forum/navigation/navbar.php";
 
