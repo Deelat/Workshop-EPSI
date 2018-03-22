@@ -23,7 +23,7 @@
         <input id="emailInput" class="form-control" name="mail" type="email" placeholder="Your email">
       </div>
       <div class="form-group">
-        <label for="schoolInput">Quel est votre école ?</label>
+        <label for="schoolInput">Quel est votre campus ?</label>
         <select id="schoolInput" class="form-control" name="school">
           <option>Paris</option>
           <option>Arras</option>
