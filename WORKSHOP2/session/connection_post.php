@@ -3,7 +3,6 @@ session_start();
 
 	// Verfier que les champs ne soit pas vides
 $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
-
 	if (!is_null('email') && !is_null($_POST['pswd']))
 	{
 		
@@ -13,7 +12,7 @@ $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
 
 			try
 			{
-				$bdd = new PDO('mysql:host=localhost:3306;dbname=**********;charset=utf8', 'root', 'root');
+				$bdd = new PDO('mysql:host=localhost:3306;dbname=workshop;charset=utf8', 'root', 'root');
 			}
 			catch(Exception $e)
 			{
@@ -22,40 +21,36 @@ $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
 
 			// Demarage de la session
 			
-			$req = $bdd->prepare('SELECT id, nom, prenom, email, date_inscription, pass, ban FROM membres WHERE email = :email');
+			$req = $bdd->prepare('SELECT * FROM eleves WHERE mail = :email');
 			$req->execute(array(
 				'email' => $email ));
 			
 			while($donnees = $req->fetch())
 			{
 
-
-				if ($donnees['ban'] == 1)
-				{
-					echo "Impossible de vous connecter vous avez été bloqué";
-					exit();
-				}
 				// Verrification du mot de passe
 
-				$hash = $donnees['pass'];
+				$pass = sha1($pass);
 
-				if (password_verify($pass, $hash))
+				if ($pass == $donnees['mdp'])
 				{
 					// Démarage de la session
 
 				    
-				    $_SESSION['id'] = $donnees['id'];
+				    $_SESSION['id'] = $donnees['id_eleve'];
 				    $_SESSION['nom'] = $donnees['nom'];
 				    $_SESSION['prenom'] = $donnees['prenom'];
-				    $_SESSION['email'] = $donnees['email'];
-				    $_SESSION['date'] = $donnees['date_inscription'];
+				    $_SESSION['email'] = $donnees['mail'];
+				    $_SESSION['annee'] = $donnees['annee'];
+				    $_SESSION['ecole'] = $donnees['ecole'];
+				    $_SESSION['naissance'] = $donnees['ddn'];
 
-					header('Location: /Base/site/compte/compte.php');
+					header('Location: /forum/forum.php');
 					exit();
 				}
 				else
 				{
-					header('Location: /Base/site/connexion/error/connexion_mdperror.php');
+					header('Location: login.php');
 					exit();
 				}
 			}
@@ -63,7 +58,7 @@ $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
 	// Redirection vers connexion_error
 	else
 	{
-		header('Location: /Base/site/connexion/error/connexion_videerror.php');
+		header('Location: login.php');
 		exit();
 	}
 		
