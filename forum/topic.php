@@ -46,6 +46,7 @@
 		                	while ($commentaire = $reponse->fetch()) 
 		                	{
 		                		?>
+		                			<p style="padding-left:6px"  class="text-primary" >Réponses</p>
 					                <div class="jumbotron">
 					                	<p style="padding-left:800px; font-size: 13px">De <?php echo $commentaire['auteur'];?> le <?php echo $commentaire['date_commentaire'];?></p>
 					                	<p style="font-size: 16px"><?php echo $commentaire['contenu'];?></p>
