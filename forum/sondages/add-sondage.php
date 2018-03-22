@@ -3,7 +3,7 @@ session_start();
 
 $link = mysqli_connect('localhost', 'root', 'rootroot', 'workshop');
 
-$nb_choix=filter_var($_POST['nbchoix'], FILTER_SANITIZE_STRING);
+$nb_choix=filter_var($_POST['typeChoix'], FILTER_SANITIZE_STRING);
 $titre = filter_var($_POST['titre'],FILTER_SANITIZE_STRING);
 $time = date("Y-m-d H:i:s");
 
