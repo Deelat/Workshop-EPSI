@@ -1,4 +1,5 @@
 <?php  
+session_start();
 	// Connexion à la base de données
 	try
 	{
@@ -8,13 +9,13 @@
 	{
 	        die('Erreur : '.$e->getMessage());
 	}
-	
+	$auteur = $_SESSION['nom'] . " " . $_SESSION['prenom'];
 	$req = $bdd->prepare('INSERT INTO commentaire(id_topic, auteur, contenu, date_commentaire)
 		VALUES
 		(:id_topic, :auteur, :contenu, :date_commentaire)');
 	$req->execute(array(
 	'id_topic' => $_POST['id_article'],
-	'auteur' => "UnAutreAuteur",
+	'auteur' => $auteur,
 	'contenu' => $_POST['contenu'],
 	'date_commentaire' => date("Y-m-d H:i:s")
 	));

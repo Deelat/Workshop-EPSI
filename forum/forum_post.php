@@ -11,6 +11,7 @@
 	        die('Erreur : '.$e->getMessage());
 	}
 
+	$auteur = $_SESSION['nom'] + $_SESSION['prenom'];
 	$req = $bdd->prepare('SELECT id_categorie FROM categorie_topic WHERE categorie_nom = :categorie');
 	$req->execute(array(
 		'categorie' => $_POST['categorie']
@@ -26,7 +27,7 @@
 				(:nom, :auteur, :contenu, :date_creation, :categorie)');
 			$insert->execute(array(
 			'nom' => $_POST['sujet'],
-			'auteur' => "auteur",
+			'auteur' => $auteur,
 			'contenu' => $_POST['contenu'],
 			'date_creation' => date("Y-m-d H:i:s"),
 			'categorie' => $id_categorie
